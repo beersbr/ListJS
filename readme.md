@@ -6,8 +6,7 @@ I found when writing simple animations and games that I needed a list that I cou
 
 ## License
 
-	A linked list in javascript
-
+	A generic, doubly linked list in javascript.
     Copyright (C) 2013  Brett Beers
 
     This program is free software: you can redistribute it and/or modify
