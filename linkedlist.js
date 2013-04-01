@@ -60,9 +60,6 @@ var List = (function(list){
                 if(curNode.value == value)
                 {
                     curNode.prev.next = curNode.next;
-
-                    console.log(curNode.prev.next);
-
                     if(curNode == this.tail)
                         this.tail = curNode.prev;
                     else
@@ -144,4 +141,6 @@ var List = (function(list){
             return true;
         }
     }
+
+    return list;
 })();
