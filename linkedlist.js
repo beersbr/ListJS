@@ -23,13 +23,13 @@ var List = (function(list){
         {
             if(this.head == null)
             {
-                this.head = new ListNode(value);
+                this.head = new list.ListNode(value);
                 this.tail = this.head;
             }
             else
             {
                 var curNode = this.tail;
-                curNode.next = new ListNode(value);
+                curNode.next = new list.ListNode(value);
                 curNode.next.prev = curNode;
                 this.tail = curNode.next;
             }
