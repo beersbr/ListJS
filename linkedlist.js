@@ -1,4 +1,5 @@
 var List = (function(list){
+    list = {};
 
     list.ListNode = function(value)
     {
