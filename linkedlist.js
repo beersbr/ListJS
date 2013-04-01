@@ -1,6 +1,7 @@
 var List = (function(list){
     list = {};
 
+    /** @class Creates a node wrapper for a value. To be used with a linked list */
     list.ListNode = function(value)
     {
         this.value = value;
@@ -8,8 +9,11 @@ var List = (function(list){
         this.prev = null;
     }
 
+    /** @class List Creates a doubly linked list */
     list.List = function()
     {
+
+        /** @type {Number} _length */
         this._length = 0;
         this.head = null;
         this.tail = null;
@@ -19,6 +23,19 @@ var List = (function(list){
               return this._length;
           }
         });
+
+        /** @function get the value at list index n
+         *  @param {Number} n the specified index*/
+        this.getValue = function(n)
+        {
+
+        }
+
+
+        this.findValue = function(n)
+        {
+
+        }
 
         this.push = function(value)
         {
@@ -74,7 +91,6 @@ var List = (function(list){
             return false;
         }
 
-        /** @function {ListNode} removes the list node if found */
         this.removeNode = function(node)
         {
             if(node == null)
@@ -122,9 +138,11 @@ var List = (function(list){
             var curNode = this.head;
             while(curNode != null)
             {
-                var node = curNode.next;
+                var nextNode = curNode.next;
                 fn(curNode.value);
-                curNode = node;
+
+                // this deals with removing nodes while iterating over the list
+                curNode = (curNode == null) ? nextNode : curNode.next;
             }
 
         }
