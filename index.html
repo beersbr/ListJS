@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>List JS Test Page</title>
+<script type="text/javascript" src="./linkedlist.js"></script>
+<script type="text/javascript">
+TEST = (function(t){
+	t = {};
+
+	t.test = function(name, test)
+	{
+		if(name == undefined)
+			name = "undefined";
+
+		if(test == undefined)
+			test = (function(){});
+
+
+		this.run = function(fn_onFinish)
+		{
+			var did_pass = false;
+			did_pass = this.test.call();
+			return did_pass;
+		}
+	}
+})();
+
+
+window.onload = function()
+{
+	
+}
+
+</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>Test Name</th>
+			<th>Status</th>
+		</thead>
+		<tbody id='table-body'>
+
+		</tbody>
+	</table>
+</body>
+</html>
